@@ -8,10 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { LoginService } from './service/login.service';
 
 @NgModule({
-  declarations: [AppComponent, NavBarComponent],
+  declarations: [AppComponent, NavBarComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -21,7 +23,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     MatButtonModule,
     MatToolbarModule,
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
