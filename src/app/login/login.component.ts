@@ -7,11 +7,11 @@ import { LoginService } from '../service/login.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  private credential = {
+  public credential = {
     username: '',
     password: '',
   };
-  private loggedIn = false;
+  public loggedIn = false;
 
   constructor(private loginService: LoginService) {}
 
